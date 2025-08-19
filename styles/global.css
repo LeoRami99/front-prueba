@@ -1,0 +1,7 @@
+/*
+ * NOTE: This file is used by NativeWind for global styles.
+ * Do not remove the import in your _layout.tsx or main entry file.
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
