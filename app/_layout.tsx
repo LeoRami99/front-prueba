@@ -1,4 +1,5 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from "@react-navigation/native";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
@@ -17,14 +18,27 @@ export default function RootLayout() {
 		// Async font loading only occurs in development.
 		return null;
 	}
+	const queryClient = new QueryClient({
+		defaultOptions: {
+			queries: {
+				staleTime: 1000 * 60 * 5, // 5 minutes
+			},
+		},
+	});
 
 	return (
-		<ThemeProvider value={colorScheme === "light" ? DarkTheme : DefaultTheme}>
-			<Stack>
-				<Stack.Screen name='index' />
-				<Stack.Screen name='+not-found' />
-			</Stack>
-			<StatusBar style='auto' />
-		</ThemeProvider>
+		<QueryClientProvider client={queryClient}>
+			<ThemeProvider value={colorScheme === "light" ? DarkTheme : DefaultTheme}>
+				<Stack
+					screenOptions={{
+						headerShadowVisible: false, // iOS
+						sheetElevation: 0, // Android
+					}}>
+					<Stack.Screen name='index' />
+					<Stack.Screen name='+not-found' />
+				</Stack>
+				<StatusBar style='auto' />
+			</ThemeProvider>
+		</QueryClientProvider>
 	);
 }
