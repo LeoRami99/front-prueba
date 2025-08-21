@@ -1,50 +1,128 @@
-# Welcome to your Expo app 👋
+# Front-Prueba - Aplicación de Comercio Electrónico con React Native
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Esta aplicación es una solución de comercio electrónico móvil desarrollada con React Native y Expo. Permite a los usuarios explorar productos, realizar pagos y gestionar transacciones.
 
-## Get started
+## 📱 Características
 
-1. Install dependencies
+- **Navegación intuitiva**: Implementada con expo-router para una experiencia de navegación fluida y basada en archivos
+- **Catálogo de productos**: Visualización de productos en formato carrusel y cuadrícula
+- **Detalles de productos**: Información detallada de cada producto
+- **Proceso de pago**: Flujo completo de checkout con opciones de pago
+- **Gestión de transacciones**: Seguimiento de las transacciones realizadas
+- **Diseño responsivo**: Adaptable a diferentes tamaños de pantalla
+- **Modo oscuro/claro**: Soporte para diferentes esquemas de color
 
-   ```bash
-   npm install
-   ```
+## 🛠️ Tecnologías utilizadas
 
-2. Start the app
+- **[Expo](https://expo.dev)**: Plataforma para desarrollo universal de aplicaciones React
+- **[React Native](https://reactnative.dev)**: Framework para desarrollo de aplicaciones nativas
+- **[Redux Toolkit](https://redux-toolkit.js.org/)**: Gestión del estado de la aplicación
+- **[TanStack Query](https://tanstack.com/query)**: Gestión de datos asíncronos y cache
+- **[NativeWind](https://www.nativewind.dev/)**: TailwindCSS para React Native
+- **[React Hook Form](https://react-hook-form.com/)**: Manejo de formularios
+- **[Axios](https://axios-http.com/)**: Cliente HTTP para realizar peticiones API
+- **[React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/)**: Animaciones fluidas
+- **[React Native Toast Message](https://github.com/calintamas/react-native-toast-message)**: Notificaciones tipo toast
 
-   ```bash
-   npx expo start
-   ```
+## 🚀 Inicio rápido
 
-In the output, you'll find options to open the app in a
+### Requisitos previos
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Node.js (versión recomendada: 18.x o superior)
+- npm o yarn
+- Expo CLI: `npm install -g expo-cli`
+- (Opcional) Emuladores para iOS o Android, o dispositivos físicos
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Instalación
 
-## Get a fresh project
+1. Clonar el repositorio:
 
-When you're ready, run:
+    ```bash
+    git clone [url-del-repositorio]
+    cd front-prueba
+    ```
 
-```bash
-npm run reset-project
+2. Instalar las dependencias:
+
+    ```bash
+    npm install
+    ```
+
+3. Iniciar la aplicación:
+
+    ```bash
+    npx expo start
+    ```
+
+4. Abre la aplicación en:
+    - Un dispositivo físico usando Expo Go
+    - Un emulador de iOS o Android
+        - Un navegador web (aunque algunas funcionalidades pueden estar limitadas)
+
+## 📁 Estructura del proyecto
+
+```
+/app                    # Vistas principales (enrutamiento basado en archivos)
+/assets                 # Recursos estáticos (imágenes, fuentes)
+/components             # Componentes reutilizables
+/constants              # Constantes globales
+/features               # Slices de Redux Toolkit
+/hooks                  # Custom hooks
+/lib                    # Configuración de bibliotecas
+/services               # Servicios para la comunicación con APIs
+/styles                 # Estilos globales
+/types                  # Interfaces y tipos TypeScript
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 📱 Módulos principales
 
-## Learn more
+### Productos
 
-To learn more about developing your project with Expo, look at the following resources:
+Permite a los usuarios ver el catálogo de productos, incluyendo imágenes, precios y detalles.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Proceso de pago
 
-## Join the community
+Gestiona el flujo de pago con validación de tarjetas de crédito y procesamiento de transacciones.
 
-Join our community of developers creating universal apps.
+### Transacciones
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Maneja el historial de transacciones y el estado de los pagos.
+
+## 🧪 Desarrollo
+
+### Comandos útiles
+
+- **Iniciar la aplicación**: `npm start`
+- **Resetear el proyecto**: `npm run reset-project`
+- **Ejecutar en Android**: `npm run android`
+- **Ejecutar en iOS**: `npm run ios`
+- **Ejecutar en web**: `npm run web`
+- **Lint**: `npm run lint`
+
+### Entorno de desarrollo
+
+El proyecto utiliza TypeScript para un desarrollo más robusto y con verificación de tipos. También se implementa NativeWind para estilizar los componentes utilizando clases de TailwindCSS.
+
+## 📋 Requisitos para producción
+
+- Cuenta en Expo para compilar la aplicación
+- Cuentas de desarrollador para iOS (Apple Developer Program) y Android (Google Play Console) para publicar la aplicación
+- Configuración de las variables de entorno adecuadas
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
+
+1. Fork el repositorio
+2. Crea una rama para tu función (`git checkout -b feature/nueva-funcion`)
+3. Haz commit de tus cambios (`git commit -m 'Añadir nueva función'`)
+4. Push a la rama (`git push origin feature/nueva-funcion`)
+5. Abre un Pull Request
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
+
+---
+
+Desarrollado con ❤️ utilizando Expo y React Native.
