@@ -62,7 +62,7 @@ const CheckInComponent = () => {
 				</View>
 			)}
 			{steps === 4 && (
-				<View className='p-6 bg-white rounded-2xl shadow-sm m-4 flex items-center justify-center'>
+				<View className='flex-1 mt-10'>
 					<InternalTransaction />
 				</View>
 			)}
