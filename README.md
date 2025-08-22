@@ -109,20 +109,6 @@ El proyecto utiliza TypeScript para un desarrollo más robusto y con verificaci�
 - Cuentas de desarrollador para iOS (Apple Developer Program) y Android (Google Play Console) para publicar la aplicación
 - Configuración de las variables de entorno adecuadas
 
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
-
-1. Fork el repositorio
-2. Crea una rama para tu función (`git checkout -b feature/nueva-funcion`)
-3. Haz commit de tus cambios (`git commit -m 'Añadir nueva función'`)
-4. Push a la rama (`git push origin feature/nueva-funcion`)
-5. Abre un Pull Request
-
-## 📝 Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
-
 ---
 
 Desarrollado con ❤️ utilizando Expo y React Native.
