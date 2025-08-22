@@ -3,6 +3,7 @@ import { selectStep } from "@/features/selectors";
 import { resetSteps } from "@/features/steps/steps.slice";
 import { resetTerms } from "@/features/terms/terms.slice";
 import { clearTransaction } from "@/features/transaction/transaction.slice";
+
 import { Pressable, Text, View } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import ChecPreviousTx from "./CheckPreviusTx";
@@ -22,7 +23,7 @@ const CheckInComponent = () => {
 		dispatch(resetTerms());
 		dispatch(clearTokenCard());
 		dispatch(clearTransaction());
-		router.replace("/");
+		router.push("/");
 	};
 
 	if (!steps) {
@@ -61,7 +62,7 @@ const CheckInComponent = () => {
 				</View>
 			)}
 			{steps === 4 && (
-				<View className='flex-1 items-center justify-center'>
+				<View className='p-6 bg-white rounded-2xl shadow-sm m-4 flex items-center justify-center'>
 					<InternalTransaction />
 				</View>
 			)}
