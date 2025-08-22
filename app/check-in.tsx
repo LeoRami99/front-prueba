@@ -1,9 +1,10 @@
 import CheckInComponent from "@/components/CheckInComponent";
-import { Stack } from "expo-router";
+import { Stack, useRouter } from "expo-router";
 import { View } from "react-native";
 import Toast from "react-native-toast-message";
 
 const CheckInScreen = () => {
+	const router = useRouter();
 	return (
 		<View className='flex-1 bg-white '>
 			<Stack.Screen
